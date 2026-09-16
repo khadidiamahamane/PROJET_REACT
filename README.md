@@ -1,16 +1,43 @@
-# React + Vite
+# PROJET_REACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mon premier projet React, monté avec Vite et stylé avec Tailwind CSS.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [React 19](https://react.dev)
+- [Vite](https://vite.dev) pour le serveur de développement et le build
+- [Tailwind CSS 4](https://tailwindcss.com), branché via le plugin `@tailwindcss/vite`
+- ESLint pour vérifier le code
 
-## React Compiler
+## Lancer le projet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Il faut [Node.js](https://nodejs.org) installé sur la machine.
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/khadidiamahamane/PROJET_REACT.git
+cd PROJET_REACT
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Le site s'ouvre ensuite sur l'adresse affichée dans le terminal (en général http://localhost:5173).
+
+## Commandes utiles
+
+| Commande | Ce qu'elle fait |
+|---|---|
+| `npm run dev` | Lance le serveur de développement, la page se recharge à chaque modification |
+| `npm run build` | Construit la version finale du site dans le dossier `dist/` |
+| `npm run preview` | Affiche la version construite, pour la vérifier avant de la mettre en ligne |
+| `npm run lint` | Vérifie le code avec ESLint |
+
+## Organisation des fichiers
+
+```
+src/
+├── main.jsx      # Point d'entrée, monte l'application dans index.html
+├── App.jsx       # Composant principal
+├── App.css       # Styles du composant principal
+├── index.css     # Styles globaux, importe Tailwind
+└── assets/       # Images et logos
+```
